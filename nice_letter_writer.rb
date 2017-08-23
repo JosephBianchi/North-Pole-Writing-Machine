@@ -3,6 +3,7 @@ require 'erb'
 kids_data   = File.read('data/kids-data.txt')
 nice_letter = File.read('templates/nice_letter_template.txt.erb')
 
+
 kids_data.each_line do |kid|
 
   kid_data_array = kid.split
@@ -11,6 +12,7 @@ kids_data.each_line do |kid|
   gender   = kid_data_array[1]
   behavior = kid_data_array[2]
   toys     = kid_data_array[3..8]
+
 
   next unless behavior == 'nice'
 
